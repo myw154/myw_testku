@@ -1,0 +1,4 @@
+2020-04-14 15:38:37,375 [log_test:<module>:34] [INFO] log_test : 日志开启
+2020-04-14 15:38:37,375 [log_test:<module>:35] [ERROR] error to process hhhhhhmyw
+2020-04-14 16:13:06,380 [log_test:fun_tes:46] [INFO] log_test : 日志开启
+2020-04-14 16:13:06,391 [log_test:fun_tes:47] [ERROR] error to process hhhhhhmyw
