@@ -189,7 +189,6 @@ class YuCompany(object):
                 break
             try:
                 res = self.send_rquest_get(detail_url)
-                print(detail_url)
             except Exception:
                 with self.err_lock:
                     self.detail_err_file.write(detail_url+'\n')
@@ -198,7 +197,8 @@ class YuCompany(object):
                 self.q2.task_done()
                 continue
             # 文件名字为 公司社会信用代码
-            file_name = detail_url.split('=')[-1]+'.html'
+            #file_name = detail_url.split('=')[-1]+'.html'
+            file_name = '_'.join(re.findall(r'=(\d+)&.*?=(.*)', detail_url)[0]) + '.html'
             file_path = os.path.join(BASE_DIR, 'jinyu_data', file_name)
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(res)
