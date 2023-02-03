@@ -287,7 +287,8 @@ class login_model:
 
 if __name__ == '__main__':
     login = login_model()
-    sign = login.run('18736141159','myw425425')
+    # sign = login.run('18736141159','myw425425')
+    sign = login.run('15010887481','myw123456')
     login.close_page()
     if sign == "passwd_error":
         print("密码错误")
